@@ -6,8 +6,8 @@
 #include <SPI.h>
 #include <Adafruit_LSM9DS1.h>
 #include <Adafruit_Sensor.h>
-#include "Adafruit_BluefruitLE_UART.h"
-#include <SoftwareSerial.h>
+//#include "Adafruit_BluefruitLE_UART.h"
+//#include <SoftwareSerial.h>
 
 // LilyGO T-SIM7000G Pinout
 #define UART_BAUD   115200
@@ -32,10 +32,10 @@ Adafruit_LSM9DS1 lsm = Adafruit_LSM9DS1();
 
 int start = 0;
 
-SoftwareSerial bluefruitSS = SoftwareSerial(BLUEFRUIT_SWUART_TXD_PIN, BLUEFRUIT_SWUART_RXD_PIN);
+//SoftwareSerial bluefruitSS = SoftwareSerial(BLUEFRUIT_SWUART_TXD_PIN, BLUEFRUIT_SWUART_RXD_PIN);
 
-Adafruit_BluefruitLE_UART ble(bluefruitSS, BLUEFRUIT_UART_MODE_PIN,
-                      BLUEFRUIT_UART_CTS_PIN, BLUEFRUIT_UART_RTS_PIN);
+//Adafruit_BluefruitLE_UART ble(bluefruitSS, BLUEFRUIT_UART_MODE_PIN,
+//                      BLUEFRUIT_UART_CTS_PIN, BLUEFRUIT_UART_RTS_PIN);
 
 void error(const __FlashStringHelper*err) {
   Serial.println(err);
